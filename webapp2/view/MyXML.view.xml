@@ -1,0 +1,86 @@
+<core:View xmlns:core="sap.ui.core.mvc" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:newton="sap.ui.core" xmlns:table="sap.ui.table"
+	controllerName="xiaoliu.controller.MyXML">
+	<table:Table rows="{/empTab/}" rowSelectionChange="onRowSel" selectionMode="Single" visibleRowCount="3">
+		<table:columns>
+			<table:Column>
+				<table:label>
+					<Label text="{i18n>XLBL_EMPID}"></Label>
+				</table:label>
+				<table:template>
+					<Text text="{empId}"></Text>
+				</table:template>
+			</table:Column>
+			<table:Column>
+				<table:label>
+					<Label text="{i18n>XLBL_EMPNAME}"></Label>
+				</table:label>
+				<table:template>
+					<Input value="{ path:'eName', formatter:'.formatter.magicUC' }"></Input>
+				</table:template>
+			</table:Column>
+			<table:Column>
+				<table:label>
+					<Label text="{i18n>XLBL_SAL}"></Label>
+				</table:label>
+				<table:template>
+					<Text text="{ parts:[{ path:'salary' },{ path : 'curr' } ], formatter:'.formatter.covertCurr' }"></Text>
+				</table:template>
+			</table:Column>
+			<table:Column>
+				<table:label>
+					<Label text="{i18n>XLBL_SMK}"></Label>
+				</table:label>
+				<table:template>
+					<CheckBox selected="{= ${smoker} === 'true' ? true : false }"></CheckBox>
+				</table:template>
+			</table:Column>
+			<table:Column>
+				<table:label>
+					<Label text="{i18n>XLBL_MSTAT}"></Label>
+				</table:label>
+				<table:template>
+					<Select selectKey="{mStatus}">
+						<items>
+							<newton:Item text="Married" key="Married"></newton:Item>
+							<newton:Item text="Singel" key="Singel"></newton:Item>
+						</items>
+					</Select>
+				</table:template>
+			</table:Column>
+			<table:Column>
+				<table:label>
+					<Label text="{i18n>XLBL_RATE}"></Label>
+				</table:label>
+				<!--<table:template>
+					<RatingIndicator value="{rating}"></RatingIndicator>
+				</table:template>-->
+			</table:Column>
+			<table:Column>
+				<table:label>
+					<Label text="{i18n>XLBL_BDAY}"></Label>
+				</table:label>
+				<table:template>
+					<!--<Text text="{ path:'birthDay', formatter:'.formatter.convertDate' }"></Text>-->
+					<Text text="{birthDay}"></Text>
+				</table:template>
+			</table:Column>
+		</table:columns>
+	</table:Table>
+	<form:SimpleForm editable="true" id="myForm">
+		<form:content>
+			<Label text="{i18n>XLBL_EMPID}"></Label>
+			<Input id="idEmpid" width="20%" value="{empId}"></Input>
+			<Label text="{i18n>XLBL_EMPNAME}"></Label>
+			<Input id="idEName" width="40%" value="{eName}"></Input>
+			<Label text="{i18n>XLBL_SAL}"></Label>
+			<!--<Input id="idSal" width="30%" value="{= ${eName} === 'Vic' ? 10000 : 99 }"></Input>-->
+			<Input id="idSal" value="{ parts:[{ path:'salary' },{ path : 'curr' } ], formatter:'.formatter.covertCurr'}"></Input>
+			<Label text="{i18n>XLBL_CURR}"></Label>
+			<Input id="idCurr" value="{curr}" width="30%"></Input>
+			<Button text="{i18n>XBUT_FLTP}" press="onFlip"></Button>
+		</form:content>
+		<form:title>
+			<newton:Title text="Logon Data"></newton:Title>
+		</form:title>
+	</form:SimpleForm>
+</core:View>

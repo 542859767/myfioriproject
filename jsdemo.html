@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<script>
+		/* when we create variables in JS,we do not need to specify type
+		 var variableName = 'val';
+		 Browser understand JS directly
+		*/
+			function vicIsHere(){
+				alert('Vis is here!');
+			}
+			function secondFunction(){
+				setTimeout(function(){
+						vicIsHere();
+				},3000);
+			
+			}
+			function login(){
+				
+				debugger;
+				// step 1: get the object of the user name field
+				//var oUsrName = document.getElementById("userName");/**/
+				// step 2: read the value from user name object Chaining in JS
+				var userName =document.getElementById("userName").value;
+				// step 3: get the object of password
+				var oPas = document.getElementById("pwd");
+				// step 4: get the value of password
+				var sPwd = oPas.value;
+				// Step 5: compare the value
+				if(userName === "vic" && sPwd === "vic")
+				{
+				  document.write("<h1>login success</h1>");	
+				}else{
+					alert("Login failed");
+				}
+				// step 6; show the result or terminate login
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="vicIsHere()">Click Me</button>
+		<button onclick="secondFunction()">Click Me</button>
+		<br>
+		<div>
+			<lable>User</lable>
+			<input id="userName">	
+		</div>
+		<div>
+			<lable>Password</lable>
+			<input id="pwd" type="password">	
+		</div>
+		<div id="errMsg">
+			<label style="color:red:font-size"
+		</di>>
+	   <button onclick="login()">Login</button>
+	
+	</body>
+</html>

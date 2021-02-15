@@ -1,0 +1,58 @@
+{
+	"empStr": {
+		"empId": 3001,
+		"eName": "xiaoliu",
+		"salary": 5000,
+		"curr": "USD",
+		"smoker": true,
+		"mStat": "Single",
+		"rating": "3"
+	},
+	"empTab": [
+		{
+			"empId": 3001,
+			"eName": "xiaoqi",
+			"salary": 5000,
+			"curr": "USD",
+			"smoker": true,
+			"mStat": "Single",
+			"rating": "3"
+		},
+		{
+			"empId": 2001,
+			"eName": "weijia",
+			"salary": 8000,
+			"curr": "RMB",
+			"smoker": false,
+			"mStat": "Married",
+			"rating": "1"
+		},
+		{
+			"empId": 2003,
+			"eName": "weijia",
+			"salary": 8000,
+			"curr": "RMB",
+			"smoker": true,
+			"mStat": "Single",
+			"rating": "5"
+		},
+		{
+			"empId": 4001,
+			"eName": "xiaobao",
+			"salary": 7000,
+			"curr": "USD",
+			"smoker": false,
+			"mStat": "Single",
+			"rating": "2"
+		},
+		{
+			"empId": 8001,
+			"eName": "dabao",
+			"salary": 8000,
+			"curr": "JPY",
+			"smoker": true,
+			"mStat": "Married",
+			"rating": "5"
+		}
+	]
+}

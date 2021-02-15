@@ -1,0 +1,12 @@
+	td,th{
+				border:1px solid black;
+			}
+			th{
+				backgroud: brown;
+				color:red;
+				front-famliy: crusive;
+				front-size: 12px;
+			}
+			td{
+				color: blue;
+			}
